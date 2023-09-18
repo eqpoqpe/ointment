@@ -21,7 +21,7 @@ function watingFor<T>(promise: PromiseLike<T> & PromiseDescribe<T>) {
       (error) => {
         promise.status = "rejected";
         promise.error = error;
-      },
+      }
     );
 
     throw promise;

@@ -11,5 +11,14 @@
   "license": "MPL-2.0",
   "devDependencies": {
     "tsup": "^7.2.0"
+  },
+  "tsup": {
+    "target": "esnext",
+    "format": [
+      "esm"
+    ],
+    "outDir": "./dist",
+    "sourcemap": true,
+    "dts": true
   }
 }
