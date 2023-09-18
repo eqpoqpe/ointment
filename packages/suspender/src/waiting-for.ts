@@ -13,6 +13,7 @@ function watingFor<T>(promise: PromiseLike<T> & PromiseDescribe<T>) {
     throw promise.error;
   } else {
     promise.status = "pending";
+
     promise.then(
       (result) => {
         promise.status = "fulfilled";
