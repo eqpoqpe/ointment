@@ -8,7 +8,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "MPL-2.0",
+  "license": "MIT",
   "devDependencies": {
     "tsup": "^7.2.0"
   },

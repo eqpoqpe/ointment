@@ -39,6 +39,15 @@ importers:
         specifier: ^7.2.0
         version: 7.2.0(typescript@5.2.2)
 
+  packages/parameter:
+    devDependencies:
+      tsup:
+        specifier: ^7.2.0
+        version: 7.2.0(typescript@5.2.2)
+      typescript:
+        specifier: ^5.2.2
+        version: 5.2.2
+
   packages/reminder:
     devDependencies:
       tsup:

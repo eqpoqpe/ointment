@@ -2,14 +2,13 @@
   "name": "@mutium/ointment",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "private": false,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky install"
   },
-  "keywords": [],
   "author": "",
-  "license": "MPL-2.0",
+  "license": "MIT",
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.7.0",
     "@typescript-eslint/parser": "^6.7.0",
