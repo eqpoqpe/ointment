@@ -2,7 +2,6 @@
 
 | Packages                                   | Description |
 | ------------------------------------------ | ----------- |
-| [@mutium/defer](./packages/defer/)         |             |
 | [@mutium/reminder](./packages/reminder/)   |             |
 | [@mutium/parameter](./packages/parameter/) |             |
 | [@mutium/suspender](./packages/suspender/) |             |
