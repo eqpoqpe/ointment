@@ -9,6 +9,8 @@ function setReminder(timeInMilliseconds: number, callback: ReminderCallback): Re
     const result = callback(reminderTimeout);
     if (result === true) {
       setReminder(timeInMilliseconds, callback);
+    } else {
+      offReminder(reminderTimeout);
     }
   }, timeInMilliseconds);
 
