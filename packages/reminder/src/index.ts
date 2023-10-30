@@ -22,3 +22,5 @@ function setReminder(timeInMilliseconds: number, callback: ReminderCallback): Re
 function offReminder(reminderTimeout: ReturnType<typeof setTimeout>) {
   clearTimeout(reminderTimeout);
 }
+
+export { setReminder, offReminder };
