@@ -1,6 +1,9 @@
-type ParamsObj = { [key: string]: string | number | boolean };
+type ParamsConstraint = { [key: string]: string | number | boolean };
 
-function paramsParser<T extends ParamsObj>(paramsObj: T, prefix?: string) {
+function paramsStringify<T extends ParamsConstraint>(
+  paramsObj: T,
+  prefix?: string
+) {
   const paramsObjKeys = Object.keys(paramsObj);
   const paramsObjLen = paramsObjKeys.length;
 
@@ -13,4 +16,4 @@ function paramsParser<T extends ParamsObj>(paramsObj: T, prefix?: string) {
   );
 }
 
-export { paramsParser, type ParamsObj };
+export { type ParamsConstraint, paramsStringify };
