@@ -1,11 +1,11 @@
-# @mutium/parameter
+ # @mutium/parameter
 
 Transforms your object into a url query string.
 
 ```js
-import { paramsParser } from "@mutium/parameter";
+import { paramsStringify } from "@mutium/parameter";
 
-paramsParser({ key: "value" }, "?"); // ?key=value
+paramsStringify({ key: "value" }, "?"); // ?key=value
 ```
 
 ## License
