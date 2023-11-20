@@ -8,7 +8,7 @@ function watingFor<T>(promise: PromiseLike<T> & PromiseDescribe<T>) {
   if (promise.status === "pending") {
     throw promise;
   } else if (promise.status === "fulfilled") {
-    return promise.result; /* it's like for value */
+    return promise.result; /* it is like for value */
   } else if (promise.status === "rejected") {
     throw promise.error;
   } else {
@@ -29,4 +29,4 @@ function watingFor<T>(promise: PromiseLike<T> & PromiseDescribe<T>) {
   }
 }
 
-export { watingFor, type PromiseDescribe };
+export { type PromiseDescribe, watingFor };
