@@ -1,6 +1,6 @@
 {
   "name": "@mutium/parameter",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "Type-safe url parameter stringify.",
   "private": false,
   "type": "module",
