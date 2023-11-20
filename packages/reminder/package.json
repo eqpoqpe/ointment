@@ -1,9 +1,13 @@
 {
   "name": "@mutium/reminder",
-  "version": "0.0.1",
+  "version": "0.0.1-alpha.1",
   "description": "",
-  "main": "index.js",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
+    "build": "tsup",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -13,12 +17,16 @@
     "tsup": "^7.2.0"
   },
   "tsup": {
-    "target": "esnext",
+    "entry": [
+      "./src/index.ts"
+    ],
+    "target": "es2020",
     "format": [
       "esm"
     ],
     "outDir": "./dist",
     "sourcemap": true,
+    "clean": true,
     "dts": true
   }
 }
