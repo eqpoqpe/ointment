@@ -4,7 +4,7 @@ type PromiseDescribe<T> = {
   error?: unknown;
 };
 
-function watingFor<T>(promise: PromiseLike<T> & PromiseDescribe<T>) {
+export function waitingFor<T>(promise: PromiseLike<T> & PromiseDescribe<T>) {
   if (promise.status === "pending") {
     throw promise;
   } else if (promise.status === "fulfilled") {
@@ -29,4 +29,3 @@ function watingFor<T>(promise: PromiseLike<T> & PromiseDescribe<T>) {
   }
 }
 
-export { type PromiseDescribe, watingFor };
