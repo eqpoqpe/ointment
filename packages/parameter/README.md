@@ -1,4 +1,4 @@
- # @mutium/parameter
+ # @ointment/parameter
 
 Transforms your object into a url query string.
 
