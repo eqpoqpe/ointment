@@ -1,6 +1,6 @@
-type ParamsConstraint = { [key: string]: string | number | boolean };
+export type ParamsConstraint = { [key: string]: string | number | boolean };
 
-function paramsStringify<T extends ParamsConstraint>(
+export function paramsStringify<T extends ParamsConstraint>(
   paramsObj: T,
   prefix?: string
 ) {
@@ -15,5 +15,3 @@ function paramsStringify<T extends ParamsConstraint>(
     prefix ?? ""
   );
 }
-
-export { type ParamsConstraint, paramsStringify };
