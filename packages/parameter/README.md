@@ -3,7 +3,7 @@
 Transforms your object into a url query string.
 
 ```js
-import { paramsStringify } from "@mutium/parameter";
+import { paramsStringify } from "@ointment/parameter";
 
 paramsStringify({ key: "value" }, "?"); // ?key=value
 ```
