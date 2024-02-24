@@ -1,5 +1,5 @@
-type Reminder = ReturnType<typeof setTimeout>;
-type ReminderCallback = (offReminder: (reminder: Reminder) => void) => boolean;
+export type Reminder = ReturnType<typeof setTimeout>;
+export type ReminderCallback = (offReminder: (reminder: Reminder) => void) => boolean;
 
 /**
  * set a reminder function that triggers based on the callback's return value.
@@ -7,7 +7,7 @@ type ReminderCallback = (offReminder: (reminder: Reminder) => void) => boolean;
  * @param callback - reminder callback function that can return boolean or void.
  * @returns returns a setTimeout reference for manual reminder cancellation.
  */
-function setReminder(
+export function setReminder(
   timeInMilliseconds: number,
   callback: ReminderCallback
 ): Reminder {
@@ -28,8 +28,6 @@ function setReminder(
  * stop a reminder function by canceling the reminder set using setTimeout.
  * @param reminderTimeout - setTimeout reference to identify the reminder to cancel.
  */
-function offReminder(reminderTimeout: Reminder) {
+export function offReminder(reminderTimeout: Reminder) {
   clearTimeout(reminderTimeout);
 }
-
-export { setReminder, offReminder };
