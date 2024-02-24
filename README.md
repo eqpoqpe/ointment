@@ -1,10 +1,10 @@
 # Ointment
 
-| Packages                                   | Description |
-| ------------------------------------------ | ----------- |
-| [@mutium/reminder](./packages/reminder/)   |             |
-| [@mutium/parameter](./packages/parameter/) |             |
-| [@mutium/suspender](./packages/suspender/) |             |
+| Packages                                     | Description |
+| -------------------------------------------- | ----------- |
+| [@ointment/reminder](./packages/reminder/)   |             |
+| [@ointment/parameter](./packages/parameter/) |             |
+| [@ointment/suspender](./packages/suspender/) |             |
 
 ## License
 
