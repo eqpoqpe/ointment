@@ -1,5 +1,5 @@
 {
-  "name": "@mutium/parameter",
+  "name": "@ointment/parameter",
   "version": "0.1.1",
   "description": "Type-safe url parameter stringify.",
   "private": false,
