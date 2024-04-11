@@ -1,4 +1,4 @@
-export type ParamsConstraint = { [key: string]: string | number | boolean };
+export type ParamsConstraint = Record<string, string | number | boolean>;
 
 export function paramsStringify<T extends ParamsConstraint>(
   paramsObj: T,
