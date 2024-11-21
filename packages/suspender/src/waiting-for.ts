@@ -1,10 +1,10 @@
-export interface PromiseDescribe<T> extends PromiseLike<T> {
+export interface PromiseDescribe<T> {
   status?: "pending" | "fulfilled" | "rejected";
   result?: T;
   error?: unknown;
 }
 
-export function waitingFor<T>(promise: PromiseDescribe<T>) {
+export function waitingFor<T>(promise: PromiseDescribe<T> & PromiseLike<T>) {
   if (promise.status === "pending") {
     throw promise;
   } else if (promise.status === "fulfilled") {
