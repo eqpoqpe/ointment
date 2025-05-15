@@ -1,14 +1,16 @@
-export interface StoreAdapter<G, S> {
+export interface StoreAdapter<G, S, R> {
   getAdapter: GetStorageAdapter<G>;
   setAdapter: SetStorageAdapter<S>;
+  removeAdapter: RemoveStorageAdapter<R>;
 }
-export interface CreateStorageOptions<G, S> {
-  storeAdapter: StoreAdapter<G, S>;
+export interface CreateStorageOptions<G, S, R> {
+  storeAdapter: StoreAdapter<G, S, R>;
 }
 
 export type Constant = Record<string, string>;
 export type GetStorageAdapter<RG> = (key: string) => RG;
 export type SetStorageAdapter<RS> = (key: string, value: string) => RS;
+export type RemoveStorageAdapter<RR> = (key: string) => RR;
 
 /**
  * Retrieves a stored value from localStorage.
@@ -31,9 +33,11 @@ export function updateStorage<T extends Constant>(
 /**
  * Creates a storage with custom adapters.
  */
-export function createStorage<T extends Constant, RG, RS>(
+export function createStorage<T extends Constant, RG, RS, GR>(
   constants: T,
-  { storeAdapter: { getAdapter, setAdapter } }: CreateStorageOptions<RG, RS>
+  {
+    storeAdapter: { getAdapter, setAdapter, removeAdapter },
+  }: CreateStorageOptions<RG, RS, GR>
 ) {
   return {
     fetchStorage(key: keyof T) {
@@ -41,6 +45,9 @@ export function createStorage<T extends Constant, RG, RS>(
     },
     updateStorage(key: keyof T, value: string) {
       return setAdapter(constants[key], value);
+    },
+    removeStorage(key: keyof T) {
+      return removeAdapter(constants[key]);
     },
   };
 }
