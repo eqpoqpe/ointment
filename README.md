@@ -2,6 +2,7 @@
 
 | Packages                                     | Description |
 | -------------------------------------------- | ----------- |
+| [@ointment/optics](./packages/optics/)       |             |
 | [@ointment/reminder](./packages/reminder/)   |             |
 | [@ointment/parameter](./packages/parameter/) |             |
 | [@ointment/suspender](./packages/suspender/) |             |
