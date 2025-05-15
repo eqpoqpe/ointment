@@ -2,6 +2,7 @@
   "name": "@ointment/utils",
   "version": "0.1.0",
   "description": "",
+  "private": false,
   "scripts": {
     "build": "tsup",
     "test": "echo \"Error: no test specified\" && exit 1"
