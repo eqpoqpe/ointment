@@ -4,7 +4,6 @@
 | -------------------------------------------- | ----------- |
 | [@ointment/optics](./packages/optics/)       |             |
 | [@ointment/reminder](./packages/reminder/)   |             |
-| [@ointment/react](./packages/react/)         |             |
 | [@ointment/parameter](./packages/parameter/) |             |
 | [@ointment/suspender](./packages/suspender/) |             |
 | [@ointment/utils](./packages/utils/)         |             |
